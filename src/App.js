@@ -1,16 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 import configStore from './store/configureStore';
-import { userLoggedIn, userLoggedOut } from './store/auth';
+import { userLoggedIn, userLoggedOut, logInUserWithEmail } from './store/auth';
 import { apiCallRequested } from './store/authAPI';
 
 const store = configStore();
 
-store.dispatch(apiCallRequested({
-  url: '/login',
-  onSuccess: userLoggedIn.type,
-  onError: userLoggedOut.type
-}));
+store.dispatch(logInUserWithEmail('',''));
 
 console.log(store.getState());
 
