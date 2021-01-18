@@ -1,8 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import configStore from './store/configureStore';
-import { userLoggedIn, userLoggedOut, logInUserWithEmail } from './store/auth';
-import { apiCallRequested } from './store/authAPI';
+import { logInUserWithEmail } from './store/auth';
 
 const store = configStore();
 
