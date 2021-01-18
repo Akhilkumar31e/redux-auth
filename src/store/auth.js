@@ -9,7 +9,7 @@ const slice = createSlice({
             return {...user, userName: action.payload.userName};
         },
         userLoggedOut: (user, action) => {
-            
+            return user;
         },
         userSignUp: (user, action) => {
             
