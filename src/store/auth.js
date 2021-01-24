@@ -11,13 +11,16 @@ const slice = createSlice({
         userLoggedOut: (user, action) => {
             return user;
         },
+        userAuthError: (user, action) => {
+            return user;
+        },
         userSignUp: (user, action) => {
-            
+            return {...user, userName: action.payload.userName};
         }
     }
 });
 
-export const {userLoggedIn, userLoggedOut, userSignUp} = slice.actions;
+export const {userLoggedIn, userLoggedOut, userSignUp, userAuthError} = slice.actions;
 
 export default slice.reducer;
 
