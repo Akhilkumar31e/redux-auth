@@ -4,6 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//firebase
+import firebase from "firebase/app";
+import { firebaseConfig } from './firebase.config';
+// Initialize Firebase
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}else {
+  firebase.app(); // if already initialized, use that one
+}
+console.log(firebase.app().name);
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
